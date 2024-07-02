@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS GAME  || BY KUNAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
+        * {
+            font-family: "Playwrite ES Deco", cursive;
+        }
+
+        body {
+            background-color: #660e60;
+        }
+        .head {
+            
+            background-color: #ac6f82;
+            box-shadow: 3px 3px 15px black;
+        }
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 70px;
+            font-size: 35px;
+            color: #000;
+        }
+        h3 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 80px;
+            font-size: 35px;
+            color: rgb(0, 0, 0);
+        }
+
+        .scoreboard {
+            margin: auto;
+            margin-top: 16px;
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            background-color: #cfa093;
+            height: 310px;
+            width: 435px;
+            box-shadow: 3px 3px 15px black;
+        }
+
+        .board {
+            align-items: center;
+            height: 300px;
+            width: 450px;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            height: 170px;
+            width: 170px;
+        }
+        #machine {
+                transform: scaleX(-1);
+            }
+
+        .vertical-line {
+            height: 100%;
+            width: 30px;
+            display: flex;
+            
+
+            .line {
+                display: flex;
+                justify-content: center;
+                height: 55%;
+                width: 8px;
+                background-color: rgb(0, 0, 0);
+                margin-top: 110px;
+                margin-left: 9px;
+                border-radius: 3px;
+            }
+
+
+        }
+
+        .score {
+            height: 70px;
+            width: 400px;
+            background-color: #cfa093;
+            border-radius: 11px;
+            margin: auto;
+            margin-top: 12px;
+            box-shadow: rgba(240, 46, 170, 0.2) -3px 3px, rgba(240, 46, 170, 0.1) -7px 7px, rgba(240, 46, 170, 0.05) -10.5px 10.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .player-score {
+            text-align: center;
+            height: 60px;
+            width: 60px;
+            background-color: #cfa093;
+            border-radius: 6%;
+            border: 2px dotted black;
+            margin-right: 30px;
+            font-size: 35px;
+        }
+
+        .machine-score {
+            height: 60px;
+            width: 60px;
+            background-color: #cfa093;
+            border-radius: 6%;
+            border: 2px dotted black;
+            margin-left: 30px;
+            font-size: 35px;
+            text-align: center;
+        }
+
+
+        .rcp {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+        }
+
+        img {
+            opacity: 0.72;
+            transition-duration: 0.60s;
+        }
+        img:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        img:active {
+            rotate: -45deg;
+        }
+
+        .base {
+            background: linear-gradient(to right,#ee0979,#b75dc9,#ff6a00);  
+            width:100%;
+            position:fixed;
+            bottom: 0px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: end;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>ROCK PAPER SCISSORS</h2>
+        </div>
+        <div class="scoreboard">
+            <div class="board">
+                <div class="player">
+                    <h3>Player</h3>
+                    <img src="rock_image.png" alt="Player">
+                </div>
+                <div class="vertical-line">
+                    <div class="line"></div>
+                </div>
+                <div class="Machine">
+                    <h3>Machine</h3>
+                    <img src="rock_image.png" alt="Machine" id="machine">
+                </div>
+            </div>
+        </div>
+        <div class="score"> 
+            <div class="player-score" >0</div>
+            <h4>-- SCORE --</h4>
+            <div class="machine-score" >0</div>
+        </div>
+        <div id="js">
+            
+        </div>
+        <div class="rcp"> 
+            <img src="rock_image.png" alt="rock" class="img" onclick="store_choice('rock')">
+            <img src="paper_image.png" alt="paper" class="img" id="paper" onclick="store_choice('paper')">
+            <img src="scissors_image.png" alt="scissors" class="img" id="scissor" onclick="store_choice('scissor')"
+        </div>
+    </div>
+    <div class="base">
+        <p>DEVELOPED BY KUNAL RAJPUT</p>
+    </div>
+    <script src="123.js"></script>
+</body>
+</html>
